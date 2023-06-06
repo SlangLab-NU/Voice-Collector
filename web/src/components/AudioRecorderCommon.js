@@ -88,13 +88,16 @@ const AudioRecorder = (props) => {
   };
 
   const stopRecording = async () => {
-    const info = await audioWeb.current.stop();
-    setAudioInfo(info);
-    setRecordingStatus("waiting");
-    setPermission(false);
-    console.log("Recording stopped");
-    // saveRecording();
-    props.onStopRecording(info)
+    const RECORD_STOP_DELAY = 500;
+    setTimeout(async () => {
+      const info = await audioWeb.current.stop();
+      setAudioInfo(info);
+      setRecordingStatus("waiting");
+      setPermission(false);
+      console.log("Recording stopped");
+      // saveRecording();
+      props.onStopRecording(info)
+    }, RECORD_STOP_DELAY);
   };
 
 
