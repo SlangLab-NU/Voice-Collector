@@ -3,6 +3,8 @@
 // Implementation of Audio Recorder: https://github.com/common-voice/common-voice/blob/5518bc53d42566cf90c6c0d5afefba2956124abf/web/src/components/pages/contribution/speak/audio-web.ts
 
 import { useState, useRef, useEffect } from "react";
+// This is the implementation of a Audio Recorder, originally from the Common Voice project. Since it's originally written in TypeScript, 
+// I compile it into JavaScript and directly import it into this project. Also there are some minor modifications to remove the compiler error.
 import AudioWeb from "./audio-web";
 import { Button, Stack } from "@mui/material";
 import MicIcon from "@mui/icons-material/Mic";
